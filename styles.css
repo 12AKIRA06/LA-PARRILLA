@@ -132,10 +132,35 @@
 
   /*MENU*/
 
-  .menu-section{
-    background:var(--charcoal);
-    padding:90px 0 100px;
-  }
+.menu-section{
+  position:relative;
+  overflow:hidden;
+  padding:90px 0 100px;
+}
+
+.menu-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://res.cloudinary.com/dvtovy4zu/image/upload/v1788469544/IMG_8703_tusctm.png") center/cover no-repeat;
+  filter:blur(6px);
+  transform:scale(1.1);
+  z-index:0;
+}
+
+.menu-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(28,21,16,0.8);
+  z-index:1;
+}
+
+.menu-section .wrap{
+  position:relative;
+  z-index:2;
+
+}
 
   .menu-head{
     text-align:center;
